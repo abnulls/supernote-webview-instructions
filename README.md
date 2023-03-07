@@ -32,7 +32,7 @@ Run the script with this command:
 or  
 `bash supernoterootA5.sh root`
 
-**Windows** (Script should work, but has not been tested)  
+**Windows** (Script should work, but have not been tested)  
 `./supernoterootA6.bat root`  
 or  
 `./supernoterootA5.bat root`
@@ -80,7 +80,7 @@ The last step is to unroot your device. Do so by running the same script you did
 or  
 `bash supernoterootA5.sh unroot`
 
-**Windows** (Script should work, but has not been tested)  
+**Windows** (Script should work, but have not been tested)  
 `./supernoterootA6.bat unroot`  
 or  
 `./supernoterootA5.bat unroot`
