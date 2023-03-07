@@ -5,7 +5,7 @@ First off I'd like to thank [ThePixelHunter](https://www.reddit.com/user/ThePixe
 **Is this safe?**   
 It worked for me, but I only have one device so I can not say. Follow these instructions at your own risk. Please note my device is a Supernote A6X running software version 2.8.22
 
-**Do I recommend you do this?**. 
+**Do I recommend you do this?**   
 No I do not. Most people will get zero benefit from this. As I understand the Supernote team would also recommend you don't do this.
 
 **Why would you want to update your webview?**  
@@ -28,12 +28,12 @@ To install the webview you must unlock root on your device. You can find scripts
 Run the script with this command:
 
 **Linux & Mac**  
-`bash supernoterootA6.sh root`
+`bash supernoterootA6.sh root`  
 or  
 `bash supernoterootA5.sh root`
 
 **Windows** (Script should work, but has not been tested)  
-`./supernoterootA6.bat root`
+`./supernoterootA6.bat root`  
 or  
 `./supernoterootA5.bat root`
 
@@ -46,7 +46,7 @@ Reboot to recovery
 `adb recovery`
 
 Run these once you are in recovery:  
-`adb shell busybox mount -o rw,seclabel,relatime,data=ordered,inode_readahead_blks=8 /dev/block/by-name/system /system`
+`adb shell busybox mount -o rw,seclabel,relatime,data=ordered,inode_readahead_blks=8 /dev/block/by-name/system /system`  
 `adb shell sed -i "s/ro.debuggable=0/ro.debuggable=1/" /system/etc/prop.default`
 
 Time to make a backup of your current webview:  
@@ -59,16 +59,16 @@ You should see something like this:
 `<new-webview-filename> 1 file pushed, 0 skipped.`
 
 We need to give the new file the proper permissions to run:  
-`adb shell chmod 644 /system/app/webview/webview.apk`
+`adb shell chmod 644 /system/app/webview/webview.apk`  
 `adb shell ls -la /system/app/webview/webview.apk`
 
 You should see something like:  
 `-rw-r--r-- 1 root root 96226345 <date and time> /system/app/webview/webview.apk`
 
 Now we will reboot and install the same new webview file to your device:  
-`adb reboot`
+`adb reboot`  
 Once rebooted:  
-`adb push <new-webview-filename> /sdcard/Download/com.android.webview.apk`
+`adb push <new-webview-filename> /sdcard/Download/com.android.webview.apk`  
 Wait for the file to finishing transferring and run:  
 `adb shell pm install -t -r "/sdcard/Download/com.android.webview.apk"`
 
@@ -76,12 +76,12 @@ Provided that it all went well, you should have an updated running webview. Open
 
 The last step is to unroot your device. Do so by running the same script you did in the beginning:   
 **Linux & Mac**  
-`bash supernoterootA6.sh unroot`
+`bash supernoterootA6.sh unroot`  
 or  
 `bash supernoterootA5.sh unroot`
 
 **Windows** (Script should work, but has not been tested)  
-`./supernoterootA6.bat unroot`
+`./supernoterootA6.bat unroot`  
 or  
 `./supernoterootA5.bat unroot`
 
