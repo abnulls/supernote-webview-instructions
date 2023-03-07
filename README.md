@@ -23,7 +23,7 @@ It should work on windows(untested), linux and macos. However you will need to i
 **Instructions:**  
 As I understand it, the Supernote will only take a webview with the package name `com.android.webview`. You need a webview with that package name and the same webview must support at least Android 8. You can find webviews that will work as of today, here: https://www.apkmirror.com/apk/lineageos/android-system-webview-2/
 
-To install the webview you must unlock root on your device. You can find scripts to do that here: (https://github.com/abnulls/supernote-webview-instructions)
+To install the webview you must unlock root on your device. You can find scripts to do that here: https://github.com/abnulls/supernote-webview-instructions
 
 Run the script with this command:
 
